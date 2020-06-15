@@ -5,15 +5,17 @@ public class Filme {
     private String tituloFilme;
     private String generoFilme;
     private String anoFilme;
+    private String estreiaFilme;
 
     public Filme(){
 
     }
 
-    public Filme(String tituloFilme, String generoFilme, String anoFilme) {
+    public Filme(String tituloFilme, String generoFilme, String anoFilme, String estreiaFilme) {
         this.tituloFilme = tituloFilme;
         this.generoFilme = generoFilme;
         this.anoFilme = anoFilme;
+        this.estreiaFilme = estreiaFilme;
     }
 
     public String getTituloFilme() {
@@ -38,5 +40,13 @@ public class Filme {
 
     public void setAnoFilme(String anoFilme) {
         this.anoFilme = anoFilme;
+    }
+
+    public String getEstreiaFilme() {
+        return estreiaFilme;
+    }
+
+    public void setEstreiaFilme(String estreiaFilme) {
+        this.estreiaFilme = estreiaFilme;
     }
 }
