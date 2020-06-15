@@ -42,14 +42,12 @@ public class MainActivity extends AppCompatActivity {
         //1 - Intanciando um linearLayout
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
+
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayout.VERTICAL));
         recyclerView.setAdapter(adapter);
 
         //evento de clique
-
-
-
         recyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(
                         getApplicationContext(),
@@ -89,43 +87,88 @@ public class MainActivity extends AppCompatActivity {
 
     public void criarFilmes(){
 
-        Filme filme = new Filme ("Sonic: O filme","Família/Comédia","2020", "13 de fevereiro");
+        Filme filme = new Filme ("Sonic: O filme",
+                "Família/Comédia",
+                "2020",
+                "13 de fevereiro",
+                R.drawable.sonic);
         this.listaFilmes.add( filme );
 
-        filme = new Filme ("Viúva Negra","Ação/Aventura","2020", "29 de outubro");
+        filme = new Filme ("Viúva Negra",
+                "Ação/Aventura",
+                "2020",
+                "29 de outubro",
+                R.drawable.black_widow);
         this.listaFilmes.add( filme );
 
-        filme = new Filme ("Mulher Maravilha 1984","Ação/Aventura","2020", "13 de agosto de 2020");
+        filme = new Filme ("Mulher Maravilha 1984",
+                "Ação/Aventura",
+                "2020",
+                "13 de agosto de 2020",
+                R.drawable.mulher_maravilha_1984);
         this.listaFilmes.add( filme );
 
-        filme = new Filme ("Mulan","Ação/Aventura","2020", "24 de julho");
+        filme = new Filme ("Mulan",
+                "Ação/Aventura",
+                "2020",
+                "24 de julho",
+                R.drawable.mulan);
         this.listaFilmes.add( filme );
 
-        filme = new Filme ("Kingsman: O Grande Jogo","Ação/Comédia","2020", "13 de fevereiro");
+        filme = new Filme ("Kingsman: O Grande Jogo",
+                "Ação/Comédia",
+                "2020",
+                "13 de fevereiro",
+                R.drawable.kings_man);
         this.listaFilmes.add( filme );
 
-        filme = new Filme ("O Homem Invisível","Terror/Thriller","2020", "27 de fevereiro");
+        filme = new Filme ("O Homem Invisível",
+                "Terror/Thriller",
+                "2020",
+                "27 de fevereiro",
+                R.drawable.homem_invisivel);
         this.listaFilmes.add( filme );
 
-        filme = new Filme ("Bad Boys para Sempre","Ação/Comédia","2020", "30 de janeiro");
+        filme = new Filme ("Bad Boys para Sempre",
+                "Ação/Comédia",
+                "2020",
+                "30 de janeiro",
+                R.drawable.badboys3);
         this.listaFilmes.add( filme );
 
-        filme = new Filme ("Os Novos Mutantes","Terror/Fantasia","2020", "3 de abril");
+        filme = new Filme ("Os Novos Mutantes",
+                "Terror/Fantasia",
+                "2020",
+                "3 de abril",
+                R.drawable.novos_multantes);
         this.listaFilmes.add( filme );
 
-        filme = new Filme ("Godzilla vs Kong","Ficção científica/Ação","2020", "18 de novembro");
+        filme = new Filme ("Godzilla vs Kong",
+                "Ficção científica/Ação",
+                "2020",
+                "18 de novembro",
+                R.drawable.godzilla_vs_kong);
         this.listaFilmes.add( filme );
 
-        filme = new Filme ("Ameaça Profunda","Terror/Ficção científica","2020", "9 de janeiro");
+        filme = new Filme ("Ameaça Profunda",
+                "Terror/Ficção científica",
+                "2020",
+                "9 de janeiro",
+                R.drawable.ameaca_profunda);
         this.listaFilmes.add( filme );
 
-        filme = new Filme ("Halloween Kills","Terror/Slasher","2020", "15 de outubro");
+        filme = new Filme ("Halloween Kills",
+                "Terror/Slasher",
+                "2020",
+                "15 de outubro",
+                R.drawable.halloween_kills);
         this.listaFilmes.add( filme );
 
-        filme = new Filme ("Um Príncipe em Nova York 2","Comédia/Comédia romântica","2020", "17 de dezembro");
-        this.listaFilmes.add( filme );
-
-        filme = new Filme ("Bill & Ted: Encare a Música","Comédia/Ficção científica","2020", "21 de agosto");
+        filme = new Filme ("Bill & Ted: Encare a Música",
+                "Comédia/Ficção científica",
+                "2020",
+                "21 de agosto",
+                R.drawable.bill_e_ted);
         this.listaFilmes.add( filme );
     }
 }

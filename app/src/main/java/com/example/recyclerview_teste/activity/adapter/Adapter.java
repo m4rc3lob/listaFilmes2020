@@ -2,6 +2,7 @@ package com.example.recyclerview_teste.activity.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -25,7 +26,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View itemLista = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_lista, parent, false);
-
         return new MyViewHolder(itemLista);
     }
 
@@ -36,6 +36,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         holder.titulo.setText(filme.getTituloFilme());
         holder.ano.setText(filme.getAnoFilme());
         holder.genero.setText(filme.getGeneroFilme());
+        holder.capa.setImageResource(filme.getCapaFilme());
     }
 
     @Override
@@ -48,6 +49,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         TextView titulo;
         TextView ano;
         TextView genero;
+        ImageView capa;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -55,6 +57,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             titulo = itemView.findViewById((R.id.textTitulo));
             ano = itemView.findViewById((R.id.textAno));
             genero = itemView.findViewById((R.id.textGenero));
+            capa = itemView.findViewById((R.id.imageCapa));
         }
     }
 }
